@@ -8,7 +8,7 @@
  "  -f, --fork            Switch process to background after sucessfully started\n"\
  "  -d, --debug           Enable tracing of reads and writes of the embedded controller\n"\
  "  -c config, --config-file config\n"\
- "                        Use alternative config file (default /etc/nbfc/nbfc.json)\n"\
+ "                        Use alternative config file (default /usr/local/etc/nbfc/nbfc.json)\n"\
  "  -s state.json, --state-file state.json\n"\
  "                        Write state to an alternative file (default /var/run/nbfc_service.state.json)\n"\
  "  -e EC, --embedded-controller EC\n"\

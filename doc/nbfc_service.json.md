@@ -181,10 +181,10 @@ FILES
 */var/run/nbfc_service.state.json*
   State file of nbfc\_service. Updated every *EcPollInterval* miliseconds.
 
-*/etc/nbfc/nbfc.json*
+*/usr/local/etc/nbfc/nbfc.json*
   The system wide configuration file.
 
-*/usr/share/nbfc/configs/\*.json*
+*/usr/local/share/nbfc/configs/\*.json*
   Configuration files for various notebook models.
 
 AUTHOR

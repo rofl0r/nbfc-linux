@@ -32,7 +32,7 @@ OPTIONS
     Enable tracing of reads and writes of the embedded controller
 
   `-c, --config-file config`
-    Use alternative config file (default /etc/nbfc/nbfc.json)
+    Use alternative config file (default /usr/local/etc/nbfc/nbfc.json)
 
   `-s, --state-file state.json`
     Write state to an alternative file (default /var/run/nbfc_service.state.json)
@@ -50,7 +50,7 @@ FILES
 */var/run/nbfc_service.state.json*
   State file of nbfc\_service. Updated every *EcPollInterval* miliseconds See [nbfc\_service.json(5)](nbfc_service.json.md) for further details.
 
-*/usr/share/nbfc/configs/\*.json*
+*/usr/local/share/nbfc/configs/\*.json*
   Configuration files for various notebook models. See [nbfc\_service.json(5)](nbfc_service.json.md) for further details.
 
 EXIT STATUS

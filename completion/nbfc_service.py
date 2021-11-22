@@ -3,7 +3,7 @@
 import sys, argparse
 
 #from argany import *
-#a.bash_compgen = 'cd /etc/nbfc/; compgen -f -- $cur'
+#a.bash_compgen = 'cd /usr/local/etc/nbfc/; compgen -f -- $cur'
 
 PROLOG = '''\
 NBFC\_SERVICE 1 "MARCH 2021" Notebook FanControl
@@ -20,7 +20,7 @@ argp = argparse.ArgumentParser(prog='nbfc_service', description='NoteBook FanCon
 argp.add_argument('-r', '--readonly',            help='Start in read-only mode', action='store_true')
 argp.add_argument('-f', '--fork',                help='Switch process to background after sucessfully started', action='store_true')
 argp.add_argument('-d', '--debug',               help='Enable tracing of reads and writes of the embedded controller', action='store_true')
-argp.add_argument('-c', '--config-file',         help='Use alternative config file (default /etc/nbfc/nbfc.json)', metavar='config')
+argp.add_argument('-c', '--config-file',         help='Use alternative config file (default /usr/local/etc/nbfc/nbfc.json)', metavar='config')
 argp.add_argument('-s', '--state-file',          help='Write state to an alternative file (default /var/run/nbfc_service.state.json)', metavar='state.json')
 argp.add_argument('-e', '--embedded-controller', help='Specify embedded controller to use', metavar='EC', choices=['dummy','ec_linux', 'ec_sys_linux'])
 
@@ -35,7 +35,7 @@ FILES
 */var/run/nbfc_service.state.json*
   State file of nbfc\_service. Updated every *EcPollInterval* miliseconds See nbfc\_service.json(5) for further details.
 
-*/etc/nbfc/configs/\*.json*
+*/usr/local/etc/nbfc/configs/\*.json*
   Configuration files for various notebook models. See nbfc\_service.json(5) for further details.
 
 EXIT STATUS

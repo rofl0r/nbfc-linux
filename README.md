@@ -55,18 +55,18 @@ It can be queried by `sudo nbfc status -a`.
 If you wish `nbfc_service` to get started on boot, use `sudo systemctl enable nbfc_service`.
 
 
-Differences en detail
+Differences in detail
 ---------------------
 
 |Files                            | NBFC Mono                             | NBFC Linux                                  |
 |---------------------------------|---------------------------------------|----------------------------------------------
 |Systemd service file             | nbfc.service                          | nbfc\_service.service                       |
 |EC Probing tool                  | ec-probe                              | ec\_probe                                   |
-|Notebook configuration files     | /opt/nbfc/Configs/*.xml               | /usr/share/nbfc/configs/*.json              |
-|Service binary                   | /opt/nbfc/nbfcservice.sh              | /bin/nbfc\_service                          |
+|Notebook configuration files     | /opt/nbfc/Configs/*.xml               | /usr/local/share/nbfc/configs/*.json              |
+|Service binary                   | /opt/nbfc/nbfcservice.sh              | /usr/local/bin/nbfc\_service                          |
 |PID File                         | /run/nbfc.pid                         | /run/nbfc\_service.pid                      |
 |State file                       | -                                     | /run/nbfc\_service.state.json               |
-|Config file                      | ?                                     | /etc/nbfc/nbfc.json                         |
+|Config file                      | ?                                     | /usr/local/etc/nbfc/nbfc.json                         |
 
 - The original NBFC service is queried and controlled by the client using TCP/IP. - NBFC Linux does not implement any "real" IPC. Information about the service can be queried by reading its state file. The client controls the service by simply rewriting its configuration file and reloading it.
 
@@ -80,7 +80,7 @@ Troubleshooting
 ---------------
 The preferred way of running nbfc is using the `ECSysLinux` implementation, which depends on the `ec_sys` kernel module.
 There is also an alternative implementation which uses `/dev/port`, called `ec_linux`.
-It can be specified on the commandline using `--embedded-controller=ec_linux` and permanently set in `/etc/nbfc/nbfc.json` with `"EmbeddedControllerType": "ec_linux"`.
+It can be specified on the commandline using `--embedded-controller=ec_linux` and permanently set in `/usr/local/etc/nbfc/nbfc.json` with `"EmbeddedControllerType": "ec_linux"`.
 
 For running NBFC with Secure Boot and Lockdown Kernel, see [acpi\_ec](https://github.com/MusiKid/acpi_ec)
 
@@ -91,7 +91,7 @@ NBFC-Linux comes with shell completion scripts for bash, fish and zsh.
 
 ```
 ~ $ nbfc_service <TAB>
---config-file          -c  -- Use alternative config file (default /etc/nbfc/nbfc.json)
+--config-file          -c  -- Use alternative config file (default /usr/local/etc/nbfc/nbfc.json)
 --debug                -d  -- Enable tracing of reads and writes of the embedded controller
 --embedded-controller  -e  -- Specify embedded controller to use
 --fork                 -f  -- Switch process to background after sucessfully started

@@ -51,7 +51,7 @@ if man:
             'File containing the PID of current running nbfc_service.',
         '/var/run/nbfc_service.state.json':
             'State file of nbfc_service.\nUpdated every *EcPollInterval* miliseconds See nbfc_service.json(5) for further details.',
-        '/etc/nbfc/configs/*.json':
+        '/usr/local/etc/nbfc/configs/*.json':
             'Configuration files for various notebook models.\nSee nbfc\_service.json(5) for further details.'
     }
 
