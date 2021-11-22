@@ -35,9 +35,9 @@ def get_system_product():
     return dmidecode_bin_get_system_product()
 
 class NbfcService:
-    CONFIG_DIR  = '/etc/nbfc'
-    CONFIGS_DIR = '/usr/share/nbfc/configs'
-    CONFIG_FILE = '/etc/nbfc/nbfc.json'
+    CONFIG_DIR  = '/usr/local/etc/nbfc'
+    CONFIGS_DIR = '/usr/local/share/nbfc/configs'
+    CONFIG_FILE = '/usr/local/etc/nbfc/nbfc.json'
     STATE_FILE  = '/var/run/nbfc_service.state.json'
     PID_FILE    = '/var/run/nbfc_service.pid'
 

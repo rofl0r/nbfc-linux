@@ -2,9 +2,9 @@
 Description=NoteBook FanControl service
 
 [Service]
-ExecStartPre=/usr/bin/nbfc wait-for-hwmon
-ExecStart=/usr/bin/nbfc start
-ExecStop=-/usr/bin/nbfc stop
+ExecStartPre=/usr/local/bin/nbfc wait-for-hwmon
+ExecStart=/usr/local/bin/nbfc start
+ExecStop=/usr/local/bin/nbfc stop
 Type=forking
 PIDFile=/var/run/nbfc_service.pid
 TimeoutStopSec=20
@@ -12,4 +12,3 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
-
